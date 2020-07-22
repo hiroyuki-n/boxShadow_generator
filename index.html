@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<title>CSSボックスシャドウジェネレーター</title>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+	<div class="generator">
+		<div class="generator_area">
+			<div class="item">
+				<div class="code_txt">横:<span id="txt_bs_x">0</span>px;</div>
+				<input type="range" id="bs_x" min="-100" max="100" step="1" value="0" oninput="boxShadow_generator()">
+			</div>
+			<div class="item">
+				<div class="code_txt">縦:<span id="txt_bs_y">0</span>px;</div>
+				<input type="range" id="bs_y" min="-100" max="100" step="1" value="0" oninput="boxShadow_generator()">
+			</div>
+			<div class="item">
+				<div class="code_txt">ぼかし:<span id="txt_bs_b">15</span>px;</div>
+				<input type="range" id="bs_b" min="0" max="100" step="1" value="15" oninput="boxShadow_generator()">
+			</div>
+			<div class="item">
+				<div class="code_txt">広がり:<span id="txt_bs_s">-5</span>px;</div>
+				<input type="range" id="bs_s" min="-100" max="100" step="1" value="-5" oninput="boxShadow_generator()">
+			</div>
+			<div class="item">
+				<div class="code_txt">色:<span id="txt_bs_c">#777777</span>;</div>
+				<input type="color" id="bs_c" value="#777777" oninput="boxShadow_generator()">
+			</div>
+			<div class="item">
+				<div class="code_txt">角丸:<span id="txt_borderRadius">10</span>px;</div>
+				<input type="range" id="generator_borderRadius" min="0" max="100" step="1" value="10"
+					oninput="borderRadius_generator()">
+			</div>
+
+		</div>
+		<div class="code_area">
+			<div class="title">コード</div>
+			<div id="code_width">box-shadow: 0px 0px 15px -5px #777777;</div>
+			<div id="code_borderRadius">border-radius: 10px;</div>
+
+		</div>
+	</div>
+	<div class="result">
+		<h1>CSSボックスシャドウジェネレーター</h1>
+		<div id="result_area">
+
+		</div>
+	</div>
+
+
+	<script type="text/javascript" src="js/style.js"></script>
+</body>
+
+</html>
